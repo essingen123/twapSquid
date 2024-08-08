@@ -1,0 +1,38 @@
+Tiny Web Auto Pilot (TWAP) Project
+
+Goal: Create 4 Docker tests (<60MB, <5s startup) for web automation tasks using Pyppeteer in NON-HEADFUL mode.
+
+Scope: Prototype code, max 20 minutes development time. Focus on brevity, terseness, and golfed code.
+
+Requirements:
+
+Docker image < 100MB ( pref < 60MB)
+Startup to screenshot in shared folder < 5s
+No error logging, just stream output on startup
+Create 4 tests: test1_twap.py, test2_twap.py, ...
+Author: Kilian Lindberg
+Date: 30241348
+
+Style: Think "golfed code" - concise, terse, and optimized for brevity.
+
+loose notes, general
+overwrite stuff
+prefer less code (inc comments)
+prototype, think prototype!
+
+example of test, clearly conveying a purpose
+async def main():
+    browser = await pyppeteer.launch(headless=True, executablePath='/usr/local/bin/chromium')
+    page = await browser.newPage()
+    await page.goto('https://news.ycombinator.com/')
+    await page.screenshot({'path': '/shared/screenshot.png'})
+    await browser.close()
+
+dont delete the screenshot files after a run; rather keep them with an unique name such as which machine and file that succeeded in the filename (or somehting smart)
+
+can you make it even more compact? less code / echo/print lines that are not on the relevant line etc; theres this bash -x mode for debugging doesnt python have a similar so we dont have to print out things that are self evident from the run?
+
+import logging
+logging.basicConfig(level=logging.DEBUG)
+import pdb
+pdb.set_trace()

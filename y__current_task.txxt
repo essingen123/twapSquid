@@ -1,0 +1,31 @@
+# I want to make 4 diffrerent docker tests called 
+# test1_twap.py
+# test2_twap.py
+# test3_twap.py
+# etc
+# 
+# i want to make this with your help in max twenty minutes
+# 
+# skip error logging etc more than that containers etc tail out and just stream out its nonsense when starting so we can see whats going on
+#
+# the docker must be under 100 mb preferablyunder 60mb
+# and run form start of docker to a screenshot in the shared folder in under 5 seconds 
+# 
+# this is a proof-of-concept code, terse almost golfed code is prefered
+# ============================================================================
+# Tiny Web Auto Pilot (TWAP) Project
+# ----------------------------------------------------------------------------
+# This script creates a lightweight Docker container for web automation tasks
+# using Pyppeteer and a browser that can run in NON-HEADFUL mode. 
+# It builds the Docker image,
+# runs the container, navigates to a website, takes a screenshot, and logs the
+# result to a file.
+#
+# The goal of this project is to create a fast and efficient web automation
+# framework that can be used for various tasks, such as web scraping, testing,
+# and monitoring.
+#
+# Author: kilian lindberg
+# Date: 30241348
+# ============================================================================
+# 
