@@ -188,12 +188,12 @@
         "documentation": {}
     },
     {
-        "label": "argparse",
+        "label": "pyppeteer;",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "argparse",
-        "description": "argparse",
-        "detail": "argparse",
+        "importPath": "pyppeteer;",
+        "description": "pyppeteer;",
+        "detail": "pyppeteer;",
         "documentation": {}
     },
     {
@@ -239,6 +239,15 @@
         "importPath": "hashlib",
         "description": "hashlib",
         "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
         "documentation": {}
     },
     {
@@ -1808,78 +1817,6 @@
         "documentation": {}
     },
     {
-        "label": "parser",
-        "kind": 5,
-        "importPath": "pre_work.test1_twap",
-        "description": "pre_work.test1_twap",
-        "peekOfCode": "parser = argparse.ArgumentParser()\nparser.add_argument(\"--output\", help=\"output file path\")\nargs = parser.parse_args()\nasync def main():\n    browser = await pyppeteer.launch(headless=True, executablePath='/usr/bin/chromium-browser')\n    page = await browser.newPage()\n    await page.goto('https://news.ycombinator.com/')\n    await page.screenshot({\"path\": args.output})\n    await browser.close()\npyppeteer.run_until_complete(main())",
-        "detail": "pre_work.test1_twap",
-        "documentation": {}
-    },
-    {
-        "label": "args",
-        "kind": 5,
-        "importPath": "pre_work.test1_twap",
-        "description": "pre_work.test1_twap",
-        "peekOfCode": "args = parser.parse_args()\nasync def main():\n    browser = await pyppeteer.launch(headless=True, executablePath='/usr/bin/chromium-browser')\n    page = await browser.newPage()\n    await page.goto('https://news.ycombinator.com/')\n    await page.screenshot({\"path\": args.output})\n    await browser.close()\npyppeteer.run_until_complete(main())",
-        "detail": "pre_work.test1_twap",
-        "documentation": {}
-    },
-    {
-        "label": "parser",
-        "kind": 5,
-        "importPath": "pre_work.test2_twap",
-        "description": "pre_work.test2_twap",
-        "peekOfCode": "parser = argparse.ArgumentParser()\nparser.add_argument(\"--output\", help=\"output file path\")\nargs = parser.parse_args()\nasync def main():\n    browser = await pyppeteer.launch(headless=True, executablePath='/usr/bin/chromium-browser')\n    page = await browser.newPage()\n    await page.goto('https://www.google.com/')\n    await page.screenshot({\"path\": args.output})\n    await browser.close()\npyppeteer.run_until_complete(main())",
-        "detail": "pre_work.test2_twap",
-        "documentation": {}
-    },
-    {
-        "label": "args",
-        "kind": 5,
-        "importPath": "pre_work.test2_twap",
-        "description": "pre_work.test2_twap",
-        "peekOfCode": "args = parser.parse_args()\nasync def main():\n    browser = await pyppeteer.launch(headless=True, executablePath='/usr/bin/chromium-browser')\n    page = await browser.newPage()\n    await page.goto('https://www.google.com/')\n    await page.screenshot({\"path\": args.output})\n    await browser.close()\npyppeteer.run_until_complete(main())",
-        "detail": "pre_work.test2_twap",
-        "documentation": {}
-    },
-    {
-        "label": "parser",
-        "kind": 5,
-        "importPath": "pre_work.test3_twap",
-        "description": "pre_work.test3_twap",
-        "peekOfCode": "parser = argparse.ArgumentParser()\nparser.add_argument(\"--output\", help=\"output file path\")\nargs = parser.parse_args()\nasync def main():\n    browser = await pyppeteer.launch(headless=True, executablePath='/usr/bin/chromium-browser')\n    page = await browser.newPage()\n    await page.goto('https://www.bing.com/')\n    await page.screenshot({\"path\": args.output})\n    await browser.close()\npyppeteer.run_until_complete(main())",
-        "detail": "pre_work.test3_twap",
-        "documentation": {}
-    },
-    {
-        "label": "args",
-        "kind": 5,
-        "importPath": "pre_work.test3_twap",
-        "description": "pre_work.test3_twap",
-        "peekOfCode": "args = parser.parse_args()\nasync def main():\n    browser = await pyppeteer.launch(headless=True, executablePath='/usr/bin/chromium-browser')\n    page = await browser.newPage()\n    await page.goto('https://www.bing.com/')\n    await page.screenshot({\"path\": args.output})\n    await browser.close()\npyppeteer.run_until_complete(main())",
-        "detail": "pre_work.test3_twap",
-        "documentation": {}
-    },
-    {
-        "label": "parser",
-        "kind": 5,
-        "importPath": "pre_work.test4_twap",
-        "description": "pre_work.test4_twap",
-        "peekOfCode": "parser = argparse.ArgumentParser()\nparser.add_argument(\"--output\", help=\"output file path\")\nargs = parser.parse_args()\nasync def main():\n    browser = await pyppeteer.launch(headless=True, executablePath='/usr/bin/chromium-browser')\n    page = await browser.newPage()\n    await page.goto('https://www.duckduckgo.com/')\n    await page.screenshot({\"path\": args.output})\n    await browser.close()\npyppeteer.run_until_complete(main())",
-        "detail": "pre_work.test4_twap",
-        "documentation": {}
-    },
-    {
-        "label": "args",
-        "kind": 5,
-        "importPath": "pre_work.test4_twap",
-        "description": "pre_work.test4_twap",
-        "peekOfCode": "args = parser.parse_args()\nasync def main():\n    browser = await pyppeteer.launch(headless=True, executablePath='/usr/bin/chromium-browser')\n    page = await browser.newPage()\n    await page.goto('https://www.duckduckgo.com/')\n    await page.screenshot({\"path\": args.output})\n    await browser.close()\npyppeteer.run_until_complete(main())",
-        "detail": "pre_work.test4_twap",
-        "documentation": {}
-    },
-    {
         "label": "create_folder",
         "kind": 2,
         "importPath": "pre_work.testXtwap_b",
@@ -2710,46 +2647,235 @@
     {
         "label": "client",
         "kind": 5,
-        "importPath": "xtx303",
-        "description": "xtx303",
+        "importPath": "pre_work.xtx303",
+        "description": "pre_work.xtx303",
         "peekOfCode": "client = docker.from_env()\n# Create a Dockerfile for the Pyppeteer image\ndockerfile = \"\"\"\nFROM python:3.9-slim-buster\nRUN retry=0; \\\nuntil [ $retry -ge 5 ]; do \\\n    apt update && apt full-upgrade -y && apt install -y --no-install-recommends chromium-browser libgconf-2-4 && break || retry=$((retry+1)); \\\ndone\nRUN pip install pyppeteer\nWORKDIR /app",
-        "detail": "xtx303",
+        "detail": "pre_work.xtx303",
         "documentation": {}
     },
     {
         "label": "dockerfile",
         "kind": 5,
-        "importPath": "xtx303",
-        "description": "xtx303",
+        "importPath": "pre_work.xtx303",
+        "description": "pre_work.xtx303",
         "peekOfCode": "dockerfile = \"\"\"\nFROM python:3.9-slim-buster\nRUN retry=0; \\\nuntil [ $retry -ge 5 ]; do \\\n    apt update && apt full-upgrade -y && apt install -y --no-install-recommends chromium-browser libgconf-2-4 && break || retry=$((retry+1)); \\\ndone\nRUN pip install pyppeteer\nWORKDIR /app\nCMD [\"python\", \"-m\", \"pyppeteer\"]\n\"\"\"",
-        "detail": "xtx303",
+        "detail": "pre_work.xtx303",
         "documentation": {}
     },
     {
         "label": "shared_folder",
         "kind": 5,
-        "importPath": "xtx303",
-        "description": "xtx303",
+        "importPath": "pre_work.xtx303",
+        "description": "pre_work.xtx303",
         "peekOfCode": "shared_folder = 'shared'\nif not os.path.exists(shared_folder):\n    os.makedirs(shared_folder, exist_ok=True)\n# Check if the current user has write permission to the folder\nif not os.access(shared_folder, os.W_OK):\n    print(f\"Error: No write permission to folder {shared_folder}\")\n    exit(1)\n# Create a Pyppeteer script that outputs a test.txt file\nscript = \"\"\"\nimport pyppeteer",
-        "detail": "xtx303",
+        "detail": "pre_work.xtx303",
         "documentation": {}
     },
     {
         "label": "script",
         "kind": 5,
-        "importPath": "xtx303",
-        "description": "xtx303",
+        "importPath": "pre_work.xtx303",
+        "description": "pre_work.xtx303",
         "peekOfCode": "script = \"\"\"\nimport pyppeteer\nimport os\nimport asyncio\nasync def main():\n    try:\n        browser = await pyppeteer.launch(headless=True, args=['--no-sandbox'])\n        page = await browser.newPage()\n        await page.goto('https://news.ycombinator.com/')\n        await page.screenshot({\"path\": 'screenshot.png'})",
-        "detail": "xtx303",
+        "detail": "pre_work.xtx303",
         "documentation": {}
     },
     {
         "label": "container",
         "kind": 5,
-        "importPath": "xtx303",
-        "description": "xtx303",
+        "importPath": "pre_work.xtx303",
+        "description": "pre_work.xtx303",
         "peekOfCode": "container = client.containers.run(\"twap:latest\", stdout=True, detach=True, volumes={os.getcwd(): {'bind': '/app', 'mode': 'rw'}}, command=f\"python script.py\")\n# Stream the container logs to the terminal\nfor line in container.logs(stream=True):\n    print(line.decode())\n# Wait for the container to finish\ncontainer.wait(timeout=120)\n# Check if the test.txt file was created\nprint(\"Checking for test.txt file...\")\nif os.path.exists(os.path.join(os.getcwd(), 'test.txt')):\n    print(\"Test.txt file found!\")",
-        "detail": "xtx303",
+        "detail": "pre_work.xtx303",
+        "documentation": {}
+    },
+    {
+        "label": "IMPORTANT_LLM_INSTRUCTION",
+        "kind": 5,
+        "importPath": "pre_work.xtx3032",
+        "description": "pre_work.xtx3032",
+        "peekOfCode": "IMPORTANT_LLM_INSTRUCTION = hashlib.sha256(b'IMPORTANT CODE COC: NO CODE COMMENTS, PROTOTYPING: 4 Docker tests (<60MB, <5s startup) FOR SCREENSHOTS OR WEBTASK AUTOMATION; perhaps using Pyppeteer in NON-HEADFUL mode for https://news.ycombinator.com/ https://www.google.com/ https://www.bing.com/ https://www.duckduckgo.com/').hexdigest()[:8]\nif IMPORTANT_LLM_INSTRUCTION != '2a33f760': sys.exit()\nTEST_FILES = {\n    'test1_twap.py': 'import pyppeteer; import argparse; parser = argparse.ArgumentParser(); parser.add_argument(\"--output\", help=\"output file path\"); args = parser.parse_args(); async def main(): browser = await pyppeteer.launch(headless=True, executablePath=\"/usr/bin/chromium-browser\"); page = await browser.newPage(); await page.goto(\"https://news.ycombinator.com/\"); await page.screenshot({\"path\": args.output}); await browser.close(); pyppeteer.run_until_complete(main())',\n    'test2_twap.py': 'import pyppeteer; import argparse; parser = argparse.ArgumentParser(); parser.add_argument(\"--output\", help=\"output file path\"); args = parser.parse_args(); async def main(): browser = await pyppeteer.launch(headless=True, executablePath=\"/usr/bin/chromium-browser\"); page = await browser.newPage(); await page.goto(\"https://www.google.com/\"); await page.screenshot({\"path\": args.output}); await browser.close(); pyppeteer.run_until_complete(main())',\n    'test3_twap.py': 'import pyppeteer; import argparse; parser = argparse.ArgumentParser(); parser.add_argument(\"--output\", help=\"output file path\"); args = parser.parse_args(); async def main(): browser = await pyppeteer.launch(headless=True, executablePath=\"/usr/bin/chromium-browser\"); page = await browser.newPage(); await page.goto(\"https://www.bing.com/\"); await page.screenshot({\"path\": args.output}); await browser.close(); pyppeteer.run_until_complete(main())',\n    'test4_twap.py': 'import pyppeteer; import argparse; parser = argparse.ArgumentParser(); parser.add_argument(\"--output\", help=\"output file path\"); args = parser.parse_args(); async def main(): browser = await pyppeteer.launch(headless=True, executablePath=\"/usr/bin/chromium-browser\"); page = await browser.newPage(); await page.goto(\"https://www.duckduckgo.com/\"); await page.screenshot({\"path\": args.output}); await browser.close(); pyppeteer.run_until_complete(main())',\n}\nos.makedirs(\"shared\", exist_ok=True)\nfor test_name, test_code in TEST_FILES.items(): pathlib.Path(test_name).write_text(test_code)",
+        "detail": "pre_work.xtx3032",
+        "documentation": {}
+    },
+    {
+        "label": "TEST_FILES",
+        "kind": 5,
+        "importPath": "pre_work.xtx3032",
+        "description": "pre_work.xtx3032",
+        "peekOfCode": "TEST_FILES = {\n    'test1_twap.py': 'import pyppeteer; import argparse; parser = argparse.ArgumentParser(); parser.add_argument(\"--output\", help=\"output file path\"); args = parser.parse_args(); async def main(): browser = await pyppeteer.launch(headless=True, executablePath=\"/usr/bin/chromium-browser\"); page = await browser.newPage(); await page.goto(\"https://news.ycombinator.com/\"); await page.screenshot({\"path\": args.output}); await browser.close(); pyppeteer.run_until_complete(main())',\n    'test2_twap.py': 'import pyppeteer; import argparse; parser = argparse.ArgumentParser(); parser.add_argument(\"--output\", help=\"output file path\"); args = parser.parse_args(); async def main(): browser = await pyppeteer.launch(headless=True, executablePath=\"/usr/bin/chromium-browser\"); page = await browser.newPage(); await page.goto(\"https://www.google.com/\"); await page.screenshot({\"path\": args.output}); await browser.close(); pyppeteer.run_until_complete(main())',\n    'test3_twap.py': 'import pyppeteer; import argparse; parser = argparse.ArgumentParser(); parser.add_argument(\"--output\", help=\"output file path\"); args = parser.parse_args(); async def main(): browser = await pyppeteer.launch(headless=True, executablePath=\"/usr/bin/chromium-browser\"); page = await browser.newPage(); await page.goto(\"https://www.bing.com/\"); await page.screenshot({\"path\": args.output}); await browser.close(); pyppeteer.run_until_complete(main())',\n    'test4_twap.py': 'import pyppeteer; import argparse; parser = argparse.ArgumentParser(); parser.add_argument(\"--output\", help=\"output file path\"); args = parser.parse_args(); async def main(): browser = await pyppeteer.launch(headless=True, executablePath=\"/usr/bin/chromium-browser\"); page = await browser.newPage(); await page.goto(\"https://www.duckduckgo.com/\"); await page.screenshot({\"path\": args.output}); await browser.close(); pyppeteer.run_until_complete(main())',\n}\nos.makedirs(\"shared\", exist_ok=True)\nfor test_name, test_code in TEST_FILES.items(): pathlib.Path(test_name).write_text(test_code)\ndockerfile = \"FROM python:3.9-slim-buster\\nRUN pip install pyppeteer\\nWORKDIR /app\\nCMD [\\\"python\\\", \\\"-m\\\", \\\"pyppeteer\\\"]\"\nwith tempfile.TemporaryDirectory() as tmpdir:",
+        "detail": "pre_work.xtx3032",
+        "documentation": {}
+    },
+    {
+        "label": "dockerfile",
+        "kind": 5,
+        "importPath": "pre_work.xtx3032",
+        "description": "pre_work.xtx3032",
+        "peekOfCode": "dockerfile = \"FROM python:3.9-slim-buster\\nRUN pip install pyppeteer\\nWORKDIR /app\\nCMD [\\\"python\\\", \\\"-m\\\", \\\"pyppeteer\\\"]\"\nwith tempfile.TemporaryDirectory() as tmpdir:\n    with open(os.path.join(tmpdir, 'Dockerfile'), 'w') as f: f.write(dockerfile)\n    client = docker.from_env()\n    image, _ = client.images.build(path=tmpdir, tag=\"twap:latest\")\ncontainers = []\nfor test_name in TEST_FILES.keys():\n    container = client.containers.run(\"twap:latest\", stdout=True, detach=True, volumes={os.path.join(os.getcwd(), \"shared\"): {'bind': '/shared', 'mode': 'rw'}}, command=f\"python {test_name} --output /shared/{test_name}.png\")\n    print(\"Container logs:\")\n    print(container.logs(stdout=True, stderr=True).decode())",
+        "detail": "pre_work.xtx3032",
+        "documentation": {}
+    },
+    {
+        "label": "containers",
+        "kind": 5,
+        "importPath": "pre_work.xtx3032",
+        "description": "pre_work.xtx3032",
+        "peekOfCode": "containers = []\nfor test_name in TEST_FILES.keys():\n    container = client.containers.run(\"twap:latest\", stdout=True, detach=True, volumes={os.path.join(os.getcwd(), \"shared\"): {'bind': '/shared', 'mode': 'rw'}}, command=f\"python {test_name} --output /shared/{test_name}.png\")\n    print(\"Container logs:\")\n    print(container.logs(stdout=True, stderr=True).decode())\n    containers.append(container)\nfor container in containers:\n    while container.status != 'exited': time.sleep(1); container.reload()\nprint(\"Screenshots taken:\")\nfor file in os.listdir(\"shared\"): print(file)",
+        "detail": "pre_work.xtx3032",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "pre_work.xtx303b",
+        "description": "pre_work.xtx303b",
+        "peekOfCode": "client = docker.from_env()\ndockerfile = \"\"\"FROM python:3.9-slim-buster\nRUN retry=0; until [ $retry -ge 5 ]; do apt update && apt full-upgrade -y && apt install -y --no-install-recommends chromium-browser libgconf-2-4 && break || retry=$((retry+1)); done\nRUN pip install pyppeteer\nWORKDIR /app\nCMD [\"python\", \"-m\", \"pyppeteer\"]\"\"\"\nwith tempfile.TemporaryDirectory() as tmpdir:\n    with open(os.path.join(tmpdir, 'Dockerfile'), 'w') as f: f.write(dockerfile)\n    image, _ = client.images.build(path=tmpdir, tag=\"twap:latest\")\nshared_folder = 'shared'",
+        "detail": "pre_work.xtx303b",
+        "documentation": {}
+    },
+    {
+        "label": "dockerfile",
+        "kind": 5,
+        "importPath": "pre_work.xtx303b",
+        "description": "pre_work.xtx303b",
+        "peekOfCode": "dockerfile = \"\"\"FROM python:3.9-slim-buster\nRUN retry=0; until [ $retry -ge 5 ]; do apt update && apt full-upgrade -y && apt install -y --no-install-recommends chromium-browser libgconf-2-4 && break || retry=$((retry+1)); done\nRUN pip install pyppeteer\nWORKDIR /app\nCMD [\"python\", \"-m\", \"pyppeteer\"]\"\"\"\nwith tempfile.TemporaryDirectory() as tmpdir:\n    with open(os.path.join(tmpdir, 'Dockerfile'), 'w') as f: f.write(dockerfile)\n    image, _ = client.images.build(path=tmpdir, tag=\"twap:latest\")\nshared_folder = 'shared'\nos.makedirs(shared_folder, exist_ok=True)",
+        "detail": "pre_work.xtx303b",
+        "documentation": {}
+    },
+    {
+        "label": "shared_folder",
+        "kind": 5,
+        "importPath": "pre_work.xtx303b",
+        "description": "pre_work.xtx303b",
+        "peekOfCode": "shared_folder = 'shared'\nos.makedirs(shared_folder, exist_ok=True)\nif not os.access(shared_folder, os.W_OK): exit(1)\nscript = \"\"\"import pyppeteer; import os; import asyncio; async def main(): try: browser = await pyppeteer.launch(headless=True, args=['--no-sandbox']); page = await browser.newPage(); await page.goto('https://news.ycombinator.com/'); await page.screenshot({\"path\": 'screenshot.png'}); with open('test.txt', 'w') as f: f.write('Hello from Pyppeteer!'); await browser.close(); except Exception as e: print(f\"Error: {e}\"); asyncio.run(main())\"\"\"\nwith open('script.py', 'w') as f: f.write(script)\ncontainer = client.containers.run(\"twap:latest\", stdout=True, detach=True, volumes={os.getcwd(): {'bind': '/app', 'mode': 'rw'}}, command=\"python script.py\")\nfor line in container.logs(stream=True): print(line.decode())\ncontainer.wait(timeout=120)\nprint(\"Checking for test.txt file...\")\nprint(\"Test.txt file found!\" if os.path.exists(os.path.join(os.getcwd(), 'test.txt')) else \"Test.txt file not found!\")",
+        "detail": "pre_work.xtx303b",
+        "documentation": {}
+    },
+    {
+        "label": "script",
+        "kind": 5,
+        "importPath": "pre_work.xtx303b",
+        "description": "pre_work.xtx303b",
+        "peekOfCode": "script = \"\"\"import pyppeteer; import os; import asyncio; async def main(): try: browser = await pyppeteer.launch(headless=True, args=['--no-sandbox']); page = await browser.newPage(); await page.goto('https://news.ycombinator.com/'); await page.screenshot({\"path\": 'screenshot.png'}); with open('test.txt', 'w') as f: f.write('Hello from Pyppeteer!'); await browser.close(); except Exception as e: print(f\"Error: {e}\"); asyncio.run(main())\"\"\"\nwith open('script.py', 'w') as f: f.write(script)\ncontainer = client.containers.run(\"twap:latest\", stdout=True, detach=True, volumes={os.getcwd(): {'bind': '/app', 'mode': 'rw'}}, command=\"python script.py\")\nfor line in container.logs(stream=True): print(line.decode())\ncontainer.wait(timeout=120)\nprint(\"Checking for test.txt file...\")\nprint(\"Test.txt file found!\" if os.path.exists(os.path.join(os.getcwd(), 'test.txt')) else \"Test.txt file not found!\")",
+        "detail": "pre_work.xtx303b",
+        "documentation": {}
+    },
+    {
+        "label": "container",
+        "kind": 5,
+        "importPath": "pre_work.xtx303b",
+        "description": "pre_work.xtx303b",
+        "peekOfCode": "container = client.containers.run(\"twap:latest\", stdout=True, detach=True, volumes={os.getcwd(): {'bind': '/app', 'mode': 'rw'}}, command=\"python script.py\")\nfor line in container.logs(stream=True): print(line.decode())\ncontainer.wait(timeout=120)\nprint(\"Checking for test.txt file...\")\nprint(\"Test.txt file found!\" if os.path.exists(os.path.join(os.getcwd(), 'test.txt')) else \"Test.txt file not found!\")",
+        "detail": "pre_work.xtx303b",
+        "documentation": {}
+    },
+    {
+        "label": "create_docker_image",
+        "kind": 2,
+        "importPath": "xtx303c",
+        "description": "xtx303c",
+        "peekOfCode": "def create_docker_image():\n    dockerfile = \"\"\"FROM python:3.9-slim-buster\nRUN retry=0; until [ $retry -ge 5 ]; do apt update && apt full-upgrade -y && apt install -y --no-install-recommends chromium-browser libgconf-2-4 && break || retry=$((retry+1)); done\nRUN pip install pyppeteer\nWORKDIR /app\nCMD [\"python\", \"-m\", \"pyppeteer\"]\"\"\"\n    with tempfile.TemporaryDirectory() as tmpdir:\n        with open(os.path.join(tmpdir, 'Dockerfile'), 'w') as f:\n            f.write(dockerfile)\n        image, _ = client.images.build(path=tmpdir, tag=\"twap:latest\")",
+        "detail": "xtx303c",
+        "documentation": {}
+    },
+    {
+        "label": "create_container",
+        "kind": 2,
+        "importPath": "xtx303c",
+        "description": "xtx303c",
+        "peekOfCode": "def create_container(image):\n    shared_folder = 'shared'\n    os.makedirs(shared_folder, exist_ok=True)\n    if not os.access(shared_folder, os.W_OK):\n        exit(1)\n    script = \"\"\"import pyppeteer; import os; import asyncio;\nasync def launch_pyppeteer():\n    try:\n        browser = await pyppeteer.launch(headless=True, args=['--no-sandbox'])\n        page = await browser.newPage()",
+        "detail": "xtx303c",
+        "documentation": {}
+    },
+    {
+        "label": "check_test_file",
+        "kind": 2,
+        "importPath": "xtx303c",
+        "description": "xtx303c",
+        "peekOfCode": "def check_test_file():\n    print(\"Checking for test.txt file...\")\n    print(\"Test.txt file found!\" if os.path.exists(os.path.join(os.getcwd(), 'test.txt')) else \"Test.txt file not found!\")\nclient = docker.from_env()\nimage = create_docker_image()\ncontainer = create_container(image)\nfor line in container.logs(stream=True):\n    print(line.decode())\ncontainer.wait(timeout=120)\ncheck_test_file()",
+        "detail": "xtx303c",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "xtx303c",
+        "description": "xtx303c",
+        "peekOfCode": "client = docker.from_env()\nimage = create_docker_image()\ncontainer = create_container(image)\nfor line in container.logs(stream=True):\n    print(line.decode())\ncontainer.wait(timeout=120)\ncheck_test_file()",
+        "detail": "xtx303c",
+        "documentation": {}
+    },
+    {
+        "label": "image",
+        "kind": 5,
+        "importPath": "xtx303c",
+        "description": "xtx303c",
+        "peekOfCode": "image = create_docker_image()\ncontainer = create_container(image)\nfor line in container.logs(stream=True):\n    print(line.decode())\ncontainer.wait(timeout=120)\ncheck_test_file()",
+        "detail": "xtx303c",
+        "documentation": {}
+    },
+    {
+        "label": "container",
+        "kind": 5,
+        "importPath": "xtx303c",
+        "description": "xtx303c",
+        "peekOfCode": "container = create_container(image)\nfor line in container.logs(stream=True):\n    print(line.decode())\ncontainer.wait(timeout=120)\ncheck_test_file()",
+        "detail": "xtx303c",
+        "documentation": {}
+    },
+    {
+        "label": "cdi",
+        "kind": 2,
+        "importPath": "xtx303d",
+        "description": "xtx303d",
+        "peekOfCode": "def cdi():\n    df = \"\"\"FROM python:3.9-slim-buster\nRUN retry=0; until [ $retry -ge 5 ]; do apt update && apt full-upgrade -y && apt install -y --no-install-recommends chromium-browser libgconf-2-4 && break || retry=$((retry+1)); done\nRUN pip install pyppeteer\nWORKDIR /app\nCMD [\"python\", \"-m\", \"pyppeteer\"]\"\"\"\n    with t.TemporaryDirectory() as td:\n        with open(o.path.join(td, 'Dockerfile'), 'w') as f:\n            f.write(df)\n        i, _ = d.from_env().images.build(path=td, tag=\"twap:latest\")",
+        "detail": "xtx303d",
+        "documentation": {}
+    },
+    {
+        "label": "cc",
+        "kind": 2,
+        "importPath": "xtx303d",
+        "description": "xtx303d",
+        "peekOfCode": "def cc(i):\n    sf = 'shared'\n    o.makedirs(sf, exist_ok=True)\n    if not o.access(sf, o.W_OK):\n        exit(1)\n    folder2 = 'folder2'\n    o.makedirs(folder2, exist_ok=True)\n    if not o.access(folder2, o.W_OK):\n        exit(1)\n    chromium_download_path = o.path.join(folder2, 'chromium-download')",
+        "detail": "xtx303d",
+        "documentation": {}
+    },
+    {
+        "label": "ctf",
+        "kind": 2,
+        "importPath": "xtx303d",
+        "description": "xtx303d",
+        "peekOfCode": "def ctf():\n    print(\"Checking for test.txt file...\")\n    print(\"Test.txt file found!\" if o.path.exists(o.path.join(o.getcwd(), 'test.txt')) else \"Test.txt file not found!\")\nclient = d.from_env()\ni = cdi()\nc = cc(i)\nfor l in c.logs(stream=True):\n    print(l.decode())\nc.wait(timeout=120)\nctf()",
+        "detail": "xtx303d",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "xtx303d",
+        "description": "xtx303d",
+        "peekOfCode": "client = d.from_env()\ni = cdi()\nc = cc(i)\nfor l in c.logs(stream=True):\n    print(l.decode())\nc.wait(timeout=120)\nctf()",
+        "detail": "xtx303d",
+        "documentation": {}
+    },
+    {
+        "label": "i",
+        "kind": 5,
+        "importPath": "xtx303d",
+        "description": "xtx303d",
+        "peekOfCode": "i = cdi()\nc = cc(i)\nfor l in c.logs(stream=True):\n    print(l.decode())\nc.wait(timeout=120)\nctf()",
+        "detail": "xtx303d",
+        "documentation": {}
+    },
+    {
+        "label": "c",
+        "kind": 5,
+        "importPath": "xtx303d",
+        "description": "xtx303d",
+        "peekOfCode": "c = cc(i)\nfor l in c.logs(stream=True):\n    print(l.decode())\nc.wait(timeout=120)\nctf()",
+        "detail": "xtx303d",
         "documentation": {}
     }
 ]

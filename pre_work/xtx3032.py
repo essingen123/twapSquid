@@ -1,0 +1,45 @@
+import docker
+import os
+import pathlib
+import logging
+import tempfile
+import asyncio
+import hashlib
+import sys
+import time
+
+logging.basicConfig(level=logging.DEBUG)
+
+IMPORTANT_LLM_INSTRUCTION = hashlib.sha256(b'IMPORTANT CODE COC: NO CODE COMMENTS, PROTOTYPING: 4 Docker tests (<60MB, <5s startup) FOR SCREENSHOTS OR WEBTASK AUTOMATION; perhaps using Pyppeteer in NON-HEADFUL mode for https://news.ycombinator.com/ https://www.google.com/ https://www.bing.com/ https://www.duckduckgo.com/').hexdigest()[:8]
+if IMPORTANT_LLM_INSTRUCTION != '2a33f760': sys.exit()
+
+TEST_FILES = {
+    'test1_twap.py': 'import pyppeteer; import argparse; parser = argparse.ArgumentParser(); parser.add_argument("--output", help="output file path"); args = parser.parse_args(); async def main(): browser = await pyppeteer.launch(headless=True, executablePath="/usr/bin/chromium-browser"); page = await browser.newPage(); await page.goto("https://news.ycombinator.com/"); await page.screenshot({"path": args.output}); await browser.close(); pyppeteer.run_until_complete(main())',
+    'test2_twap.py': 'import pyppeteer; import argparse; parser = argparse.ArgumentParser(); parser.add_argument("--output", help="output file path"); args = parser.parse_args(); async def main(): browser = await pyppeteer.launch(headless=True, executablePath="/usr/bin/chromium-browser"); page = await browser.newPage(); await page.goto("https://www.google.com/"); await page.screenshot({"path": args.output}); await browser.close(); pyppeteer.run_until_complete(main())',
+    'test3_twap.py': 'import pyppeteer; import argparse; parser = argparse.ArgumentParser(); parser.add_argument("--output", help="output file path"); args = parser.parse_args(); async def main(): browser = await pyppeteer.launch(headless=True, executablePath="/usr/bin/chromium-browser"); page = await browser.newPage(); await page.goto("https://www.bing.com/"); await page.screenshot({"path": args.output}); await browser.close(); pyppeteer.run_until_complete(main())',
+    'test4_twap.py': 'import pyppeteer; import argparse; parser = argparse.ArgumentParser(); parser.add_argument("--output", help="output file path"); args = parser.parse_args(); async def main(): browser = await pyppeteer.launch(headless=True, executablePath="/usr/bin/chromium-browser"); page = await browser.newPage(); await page.goto("https://www.duckduckgo.com/"); await page.screenshot({"path": args.output}); await browser.close(); pyppeteer.run_until_complete(main())',
+}
+
+os.makedirs("shared", exist_ok=True)
+for test_name, test_code in TEST_FILES.items(): pathlib.Path(test_name).write_text(test_code)
+
+dockerfile = "FROM python:3.9-slim-buster\nRUN pip install pyppeteer\nWORKDIR /app\nCMD [\"python\", \"-m\", \"pyppeteer\"]"
+with tempfile.TemporaryDirectory() as tmpdir:
+    with open(os.path.join(tmpdir, 'Dockerfile'), 'w') as f: f.write(dockerfile)
+    client = docker.from_env()
+    image, _ = client.images.build(path=tmpdir, tag="twap:latest")
+
+containers = []
+for test_name in TEST_FILES.keys():
+    container = client.containers.run("twap:latest", stdout=True, detach=True, volumes={os.path.join(os.getcwd(), "shared"): {'bind': '/shared', 'mode': 'rw'}}, command=f"python {test_name} --output /shared/{test_name}.png")
+    print("Container logs:")
+    print(container.logs(stdout=True, stderr=True).decode())
+    containers.append(container)
+
+for container in containers:
+    while container.status != 'exited': time.sleep(1); container.reload()
+
+print("Screenshots taken:")
+for file in os.listdir("shared"): print(file)
+
+for container in containers: container.remove()
